@@ -50,3 +50,5 @@ Or you can use the code below
 ```terminal
 python main.py -i ./Tempest.txt -o result.txt
 ```
+
+#### Author: Sqoor

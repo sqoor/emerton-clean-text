@@ -1,6 +1,6 @@
 """
 Description: class meant to deal with files withing this small project, so it should read from files and write to others
-:param: args arguemnts read from the CLi provided by the user to read the path to input file args.input and output file args.output
+:param: args arguments read from the CLi provided by the user to read the path to input file args.input and output file args.output
 :method:
     + read_input
     + write_output
