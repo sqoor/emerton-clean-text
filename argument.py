@@ -23,10 +23,14 @@ import argparse
 class Argument:
     @staticmethod
     def get():
-        parser = argparse.ArgumentParser(description="A program that counts unique words from an English text file, "
-                                                     "treating hyphen and apostrophe as part of the word. "
-                                                     "The program output the ten most frequent words "
-                                                     "and mention the number of occurrences", exit_on_error=True)
+        parser = argparse.ArgumentParser(
+            description="A program that counts unique words from an English text file, "
+                        "treating hyphen and apostrophe as part of the word. "
+                        "The program output the ten most frequent words "
+                        "and mention the number of occurrences"
+            # , exit_on_error=True
+        )
+
         parser.add_argument(
             '-i',
             '--input',
