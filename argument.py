@@ -6,22 +6,14 @@ import argparse
         and read the values and use it in this script, all the arguments related to connecting to the database.
         Verbose flag used to print to the console the status of the script (i.e connected to db, view updated,... etc)
 
-        List of argument:
-            --driver='db driver'
-            --server='db server name'
-            --userid='db user'
-            --password='user password'
-            --database='db name'
-            --verbose: if was specified value = True otherwise None
+        List of parameters:
+            --input='path-to-input-file'
+            --output='path-to-output-file'
         or you can use the shortcut
-            -r='db driver'
-            -s='db server name'
-            -u='db user'
-            -p='user password'
-            -d='db name'
-            -v: if was specified value = True otherwise None
+            -i='path-to-input-file'
+            -o='path-to-output-file'
 
-        All the argument are required to run this script, except verbose flag.
+        All the parameters are required to run this script, except verbose flag.
 
     Returns:
       object: has the list of parsed argument from CMD/terminal so it will be used later in this script.
@@ -31,18 +23,21 @@ import argparse
 class Argument:
     @staticmethod
     def get():
-        parser = argparse.ArgumentParser(description="This a program that reads a text file and find "
-                                                     "10 most frequent words.", exit_on_error=True)
+        parser = argparse.ArgumentParser(description="A program that counts unique words from an English text file, "
+                                                     "treating hyphen and apostrophe as part of the word. "
+                                                     "The program output the ten most frequent words "
+                                                     "and mention the number of occurrences", exit_on_error=True)
         parser.add_argument(
             '-i',
             '--input',
-            help='Path to the file to read from',
+            help='Path to the file to read from.',
             required=True
         )
         parser.add_argument(
             '-o',
             '--output',
-            help='Path to  the file to save result to',
+            help='Path to the file to save result to, if not existed it will be created at the specified path '
+                 'or at current directory',
             required=True
         )
         # parser.add_argument(
