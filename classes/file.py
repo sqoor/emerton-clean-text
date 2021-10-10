@@ -6,6 +6,7 @@ Description: class meant to deal with files withing this small project, so it sh
     + write_output
 """
 
+
 class File:
     def __init__(self, args):
         self.input_path = args.input
@@ -19,6 +20,7 @@ class File:
         try:
             file = open(self.input_path, "r")
             str_file = file.read()
+            file.close()
             if len(str_file) < 1:
                 print(f'Exit, the provided file "{self.input_path}" is empty!')
                 exit()

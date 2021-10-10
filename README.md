@@ -20,7 +20,7 @@ this (185)
 ### Environment
 This program been tested on **Windows 10** and **Ubuntu 18.04 LTS** operating systems.
 - The running time environment are python 3.9.2 on Windows 10, Python 3.6.2 on Ubuntu.
-- The used libraries with Python runtime environment: itertools, re, argparse. all standard libraries, so it should run without need to install them.
+- The used libraries with Python runtime environment: itertools, re, argparse, os, unittest. all standard libraries, so it should run without need to install them.
 
 
 ### Run the program 
@@ -40,6 +40,11 @@ Or you can sue the code below
 python3 main.py -i ./Tempest.txt -o result.txt
 ```
 
+for running the test cases
+```terminal
+python3 -m unittest
+```
+
 <br>
 
 Example on **Windows 10**
@@ -49,6 +54,11 @@ python main.py --input ./Tempest.txt --output result.txt
 Or you can use the code below 
 ```terminal
 python main.py -i ./Tempest.txt -o result.txt
+```
+
+for running the test cases
+```terminal
+python -m unittest
 ```
 
 #### Author: Sqoor

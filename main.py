@@ -3,6 +3,11 @@ from classes.file import File
 from classes.word import Word
 
 
+__author__ = "Sqoor"
+__version__ = "0.1.0"
+__license__ = "Emerton"
+
+
 class Starter:
     def main(self):
         args = Argument.get()
@@ -30,7 +35,7 @@ class Starter:
         print('')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     starter = Starter()
     starter.main()
 
